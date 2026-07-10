@@ -1,4 +1,14 @@
 # BI-Foundations-with-SQL-ETL-and-Data-Warehousing
+Certificate:
+
+![Certificate for Rennie Ramlochan](https://github.com/user-attachments/assets/f92afb35-b02a-4f39-95a6-3d0cd789fc17)
+
+
+**Certificate for Rennie Ramlochan, Microsoft Power BI Data Analyst Professional Certificate, offered through Coursera.** 
+
+
+***Those who earn the Microsoft Power BI Data Analyst Professional Certificate have completed courses developed by Microsoft that include hands-on, practice-based assessments designed to prepare them for roles in data analysis and business intelligence. They are competent in connecting to and cleaning data, modeling and visualizing data using Power BI Desktop, and performing advanced data analysis, as well as utilizing industry-standard tools and software such as Power BI, Power Query, DAX, and SQL.*** 
+
 
 ## Overview
 This repository serves as a professional portfolio documenting the completion of the **BI Foundations with SQL, ETL, and Data Warehousing** specialization offered through Coursera.

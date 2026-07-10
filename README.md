@@ -1,3 +1,45 @@
+# BI-Foundations-with-SQL-ETL-and-Data-Warehousing
+
+## Overview
+This repository serves as a professional portfolio documenting the completion of the **BI Foundations with SQL, ETL, and Data Warehousing** specialization offered through Coursera.
+
+This program provides a deep dive into the foundational architecture of Business Intelligence, focusing on how raw data is extracted, transformed, and loaded into structured data warehouses to enable high-level analytical reporting.
+
+## Technical Proficiencies
+- **Data Warehousing:** Designing and implementing star and snowflake schemas for scalable data storage.
+- **ETL Processes:** Building robust pipelines to extract data from various sources, transform it for business logic, and load it into target systems.
+- **SQL for BI:** Writing advanced queries for complex reporting, performance tuning, and database optimization.
+- **Business Intelligence Logic:** Understanding the flow of data from operational systems to decision-support environments.
+- **Data Quality:** Implementing processes to ensure data integrity and consistency throughout the warehouse lifecycle.
+
+## Course Curriculum & Projects
+
+| Module | Focus Area | Key Deliverables |
+| --- | --- | --- |
+| 01 | SQL for Data Science | Querying techniques and data aggregation |
+| 02 | Data Warehousing Concepts | Schema design and dimension modeling |
+| 03 | ETL Pipelines | Extraction, transformation, and loading workflows |
+| 04 | BI Reporting Basics | Data modeling for reporting needs |
+| 05 | Capstone Project | End-to-end data warehouse implementation |
+
+## Repository Structure
+- course-01-sql-foundations/      # SQL scripts and query optimization exercises
+- course-02-warehousing/          # Schema designs and architectural diagrams
+- course-03-etl-pipelines/        # ETL workflow documentation and scripts
+- course-04-bi-reporting/         # Modeling for reporting and KPI definitions
+- course-05-capstone/             # Final end-to-end data warehousing project
+
+## How to View
+1. **Browse the Directories:** Each folder corresponds to a core component of the BI lifecycle.
+2. **Review Documentation:** Click on the files to view the SQL scripts, schema designs, and ETL documentation developed during the program.
+3. **Reference Material:** Please note that the documentation is for reference purposes to demonstrate the application of data warehousing and BI foundational concepts.
+
+---
+Maintained by Rennie Ramlochan
+
+
+
+
 # About
 This is a project about creating a data warehouse in a star schema and designing the ETL process. This data warehouse is then used to create visualizations on Power Bi and create Data Mining Models
 

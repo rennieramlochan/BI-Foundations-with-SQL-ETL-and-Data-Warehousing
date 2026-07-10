@@ -1,0 +1,1703 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/26/2024 10:11:47 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-6U1S4EO"
+  DTS:CreatorName="DESKTOP-6U1S4EO\Komnas"
+  DTS:DTSID="{F967FFD5-4F57-4261-B6A2-AB4D47433CBB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1032"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{EB4B0C56-F8C5-4A7A-B724-43FBAA98B296}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6U1S4EO]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{8AB244FC-96DB-492B-8DFC-7E1A6A6D4E38}"
+      DTS:ObjectName="DESKTOP-6U1S4EO">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=DESKTOP-6U1S4EO;Provider=MSOLAP.8;Integrated Security=SSPI;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6U1S4EO.CarSales]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+      DTS:ObjectName="DESKTOP-6U1S4EO.CarSales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-6U1S4EO;Initial Catalog=CarSales;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2D8FDDA1-F314-4E04-A291-F2FB158AD658}DESKTOP-6U1S4EO.CarSales;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6U1S4EO.CarSales 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A4220D4C-4161-4DB7-8A0C-178CFEBA97D8}"
+      DTS:ObjectName="DESKTOP-6U1S4EO.CarSales 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-6U1S4EO;Initial Catalog=CarSales;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{A4220D4C-4161-4DB7-8A0C-178CFEBA97D8}DESKTOP-6U1S4EO.CarSales 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-6U1S4EO.VideoGames]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{603D3A34-899C-4EC5-9DB0-1BE96B51E17B}"
+      DTS:ObjectName="DESKTOP-6U1S4EO.VideoGames">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-6U1S4EO;Initial Catalog=VideoGames;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{603D3A34-899C-4EC5-9DB0-1BE96B51E17B}DESKTOP-6U1S4EO.VideoGames;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{585C0751-2948-4B1A-BABE-C7A0476EFC2B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1032"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1253"
+          DTS:ConnectionString="C:\Users\Komnas\Desktop\Big Data\Dataset\Car Sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Car_id"
+              DTS:DTSID="{69BF14CF-0D21-4955-B7A1-DC97C33EA745}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{58FF8457-A4A8-44E2-9B63-ED5E8B782A5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Name"
+              DTS:DTSID="{4D5AC73F-6800-4CF3-8136-97156664C49F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="6"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{759A9E1C-B8E6-4435-8FD8-9DB04B887D88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Annual Income"
+              DTS:DTSID="{71CA5887-3BD0-4FF4-8D86-4883D4E0302F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="47"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dealer_Name"
+              DTS:DTSID="{CBBECA3B-9677-4AA2-ADAA-246C559110F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company"
+              DTS:DTSID="{4BAC9292-AF50-4E53-9116-82B584BE2418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Model"
+              DTS:DTSID="{7A96F2CD-6932-4118-A374-A7C400ECD9F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Engine"
+              DTS:DTSID="{2CD6B214-32CD-4DB1-AD92-6AE75014727C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Transmission"
+              DTS:DTSID="{50FFF329-D92D-4E4A-BBCE-7AB734FA1034}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Color"
+              DTS:DTSID="{E8EF4F62-F987-4B1F-B50D-1AED06CF54FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{592524CE-30A3-481E-8C90-43808733FB83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dealer_No "
+              DTS:DTSID="{5A77EDCA-2F56-4894-83ED-39EFBBBA5653}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Body Style"
+              DTS:DTSID="{B92141D2-DC5C-400E-B08E-EEB10AE0EAEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Phone"
+              DTS:DTSID="{E934F7AA-AC89-4BB8-9A5A-5DC5200379D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dealer_Region"
+              DTS:DTSID="{01C9F5FB-B47F-41A7-BE84-6EF43B9E0CE1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{008F7AFF-96CA-427F-B240-E219AA265A1B}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;PROVIDER=MSOLAP;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.MultidimensionalProject]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{8EA52D38-8385-4381-A16A-A488851EFAEB}"
+      DTS:ObjectName="localhost.MultidimensionalProject">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;User ID=Komnas;Initial Catalog=MultidimensionalProject;Provider=MSOLAP.8;Impersonation Level=Impersonate;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiQ1sG8lC/ESsB+sDKPeCDgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFQfpVnwE6Kz3l28nlNSrpvhKvjRY7xgilGmMpOCDa/gAAAAAOgAAAAAIAACAAAAB/thzMOPgjLwJs286Vpc1OlcT2dK3+xtq6XvNzbfXxZyAAAADZt/R813SfY8C1PKYJA09sgLx9AgZg4Az1j/DYEaRdmkAAAACRXiSkV1X0KcgqHTeRlp2DqoWTcX1rVeF3RraLEza1w0CpeSpmeoyId3jTSSD9iRnIAJKWC5rycXDcQFPG9H1I</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Analysis Services Processing Task"
+      DTS:CreationName="Microsoft.DTSProcessingTask"
+      DTS:Description="Analysis Services Processing Task"
+      DTS:DTSID="{A3CA5E7F-247A-42F7-97AD-3B34DF16A0AC}"
+      DTS:ExecutableType="Microsoft.DTSProcessingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Analysis Services Processing Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASProcessingData
+          ConnectionName="localhost.MultidimensionalProject"
+          ProcessingCommands="&lt;Batch xmlns=&quot;http://schemas.microsoft.com/analysisservices/2003/engine&quot;&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot; xmlns:ddl400=&quot;http://schemas.microsoft.com/analysisservices/2012/engine/400&quot; xmlns:ddl400_400=&quot;http://schemas.microsoft.com/analysisservices/2012/engine/400/400&quot; xmlns:ddl500=&quot;http://schemas.microsoft.com/analysisservices/2013/engine/500&quot; xmlns:ddl500_500=&quot;http://schemas.microsoft.com/analysisservices/2013/engine/500/500&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;MultidimensionalProject&lt;/DatabaseID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;&lt;/Batch&gt;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A82F967C-2BD6-4E22-80B5-74F81815E83B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import CSV\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1032"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Car_id]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Car_id]"
+                      length="12"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Car_id]"
+                      name="Car_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      length="30"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]"
+                      name="Customer Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      length="6"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]"
+                      name="Gender"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Annual Income]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Annual Income]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Annual Income]"
+                      name="Annual Income"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Name]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_Name]"
+                      length="47"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Name]"
+                      name="Dealer_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Company]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Company]"
+                      length="10"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Company]"
+                      name="Company"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Model]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Model]"
+                      length="20"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Model]"
+                      name="Model"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Engine]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Engine]"
+                      length="30"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Engine]"
+                      name="Engine"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Transmission]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transmission]"
+                      length="20"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Transmission]"
+                      name="Transmission"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Color]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color]"
+                      length="15"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Color]"
+                      name="Color"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Price]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_No ]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_No ]"
+                      length="10"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_No ]"
+                      name="Dealer_No "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Body Style]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Body Style]"
+                      length="15"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Body Style]"
+                      name="Body Style"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Phone]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Region]"
+                      codePage="1253"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_Region]"
+                      length="20"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Region]"
+                      name="Dealer_Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Car_id]"
+                      codePage="1253"
+                      dataType="str"
+                      length="12"
+                      name="Car_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                      codePage="1253"
+                      dataType="str"
+                      length="30"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                      codePage="1253"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Annual Income]"
+                      dataType="i8"
+                      name="Annual Income" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_Name]"
+                      codePage="1253"
+                      dataType="str"
+                      length="47"
+                      name="Dealer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Company]"
+                      codePage="1253"
+                      dataType="str"
+                      length="10"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Model]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Engine]"
+                      codePage="1253"
+                      dataType="str"
+                      length="30"
+                      name="Engine" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transmission]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Transmission" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Color]"
+                      codePage="1253"
+                      dataType="str"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Price]"
+                      dataType="i8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_No ]"
+                      codePage="1253"
+                      dataType="str"
+                      length="10"
+                      name="Dealer_No " />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Body Style]"
+                      codePage="1253"
+                      dataType="str"
+                      length="15"
+                      name="Body Style" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Phone]"
+                      dataType="i8"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer_Region]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Dealer_Region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1253"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1253</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[staging]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-6U1S4EO.CarSales]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-6U1S4EO.CarSales]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Car_id]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="Car_id"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Car_id]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Car_id]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Customer Name]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Customer Name"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Customer Name]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Name]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Gender]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Gender]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Annual Income]"
+                      cachedDataType="i8"
+                      cachedName="Annual Income"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Annual Income]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Annual Income]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Dealer_Name]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="47"
+                      cachedName="Dealer_Name"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_Name]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Name]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Company]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Company"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Company]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Model]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Model"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Model]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Model]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Engine]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Engine"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Engine]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Engine]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Transmission]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Transmission"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Transmission]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Transmission]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Color]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Color"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Color]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Color]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Price]"
+                      cachedDataType="i8"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Price]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Body Style]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Body Style"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Body Style]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Body Style]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Phone]"
+                      cachedDataType="i8"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Dealer_Region]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Dealer_Region"
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_Region]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_Region]" />
+                    <inputColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[Dealer_No ]"
+                      cachedCodepage="1253"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Dealer_No "
+                      externalMetadataColumnId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_No]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer_No ]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Car_id]"
+                      codePage="1253"
+                      dataType="str"
+                      length="12"
+                      name="Car_id" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Customer Name]"
+                      codePage="1253"
+                      dataType="str"
+                      length="30"
+                      name="Customer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Gender]"
+                      codePage="1253"
+                      dataType="str"
+                      length="6"
+                      name="Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Annual Income]"
+                      dataType="i8"
+                      name="Annual Income" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_Name]"
+                      codePage="1253"
+                      dataType="str"
+                      length="47"
+                      name="Dealer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Company]"
+                      codePage="1253"
+                      dataType="str"
+                      length="10"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Model]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Engine]"
+                      codePage="1253"
+                      dataType="str"
+                      length="30"
+                      name="Engine" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Transmission]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Transmission" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Color]"
+                      codePage="1253"
+                      dataType="str"
+                      length="15"
+                      name="Color" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Price]"
+                      dataType="i8"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Body Style]"
+                      codePage="1253"
+                      dataType="str"
+                      length="15"
+                      name="Body Style" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Phone]"
+                      dataType="i8"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_Region]"
+                      codePage="1253"
+                      dataType="str"
+                      length="20"
+                      name="Dealer_Region" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[Dealer_No]"
+                      codePage="1253"
+                      dataType="str"
+                      length="10"
+                      name="Dealer_No" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import CSV.Paths[Flat File Source Output]"
+              endId="Package\Import CSV\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Staging"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{4331AF26-BCFC-4870-823B-51EE140EB0B5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Staging"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [CarSales].[dbo].[staging];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Car Dimension"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2903B240-3E0A-4249-9F75-894FCF6F8E8C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Car Dimension"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="-- Update Car Dimension&#xA;INSERT INTO Car_dim (CarId, Model, Engine, Transmission, Color, Price, Body_Style, Company)&#xA;SELECT DISTINCT&#xA;    s.Car_id,&#xA;    s.Model,&#xA;    s.Engine,&#xA;    s.Transmission,&#xA;    s.Color,&#xA;    s.Price,&#xA;    s.[Body Style],&#xA;    s.Company&#xA;FROM&#xA;    staging s&#xA;WHERE NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM Car_dim cd&#xA;    WHERE cd.CarId = s.Car_id&#xA;);&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update CarSalesFact Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{74D1C516-5B41-4F4B-B1DF-3E0A5444A873}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update CarSalesFact Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="  -- Update CarSalesFact Table&#xA;INSERT INTO CarSalesFact&#xA;SELECT [Date_dim].DateId AS [Date], &#xA;[Car_dim].CarId AS [Car], &#xA;[Customer_dim].CustomerId AS [Customer],&#xA;[Dealer_dim].DealerId AS [Dealer],&#xA;[staging].[Phone]&#xA;FROM staging&#xA;INNER JOIN [Date_dim] on [staging].[Date] = [Date_dim].[label_date]&#xA;INNER JOIN [Car_dim] &#xA;on [staging].[Model] = [Car_dim].[Model] AND [staging].[Engine] = [Car_dim].[Engine] AND [staging].[Transmission] = [Car_dim].[Transmission] AND [staging].[Color] = [Car_dim].[Color] AND [staging].[Price] = [Car_dim].[Price] AND [staging].[Body Style] = [Car_dim].[Body_Style] AND [staging].[Company] = [Car_dim].[Company]&#xA;INNER JOIN [Customer_dim] on [staging].[Customer Name] = [Customer_dim].[Customer_Name]&#x9;AND [staging].[Gender] = [Customer_dim].[Gender] AND [staging].[Annual Income] = [Customer_dim].[Annual_Income]&#xA;INNER JOIN [Dealer_dim] on [staging].[Dealer_Name] = [Dealer_dim].[Dealer_Name] AND [staging].[Dealer_Region] = [Dealer_dim].[Dealer_Region] AND [staging].[Dealer_No] = [Dealer_dim].[DealerNo]&#xA;WHERE NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM CarSalesFact csf&#xA;    WHERE [Date_dim].DateId = csf.[Date]&#xA;      AND [Car_dim].CarId = csf.[Car]&#xA;      AND [Customer_dim].CustomerId = csf.[Customer]&#xA;      AND [Dealer_dim].DealerId = csf.[Dealer]&#xA;      AND [staging].[Phone] = csf.[Phone]&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Customer Dimension"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B3E247B2-5CD1-4B93-BFC4-7409339190BE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Customer Dimension"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="-- Update Customer Dimension&#xA;INSERT INTO Customer_dim (Customer_Name, Gender, Annual_Income)&#xA;SELECT DISTINCT&#xA;    s.[Customer Name],&#xA;    s.Gender,&#xA;    s.[Annual Income]&#xA;FROM&#xA;    staging s&#xA;WHERE NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM Customer_dim cd&#xA;    WHERE cd.Customer_Name = s.[Customer Name] AND cd.Annual_Income = s.[Annual Income]&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Date dimension"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CA00F9AB-1A76-4335-B0BF-B59BE219413F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Date dimension"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="-- Update Date Dimension&#xA;INSERT INTO Date_dim (label_date)&#xA;SELECT DISTINCT&#xA;    s.Date&#xA;FROM&#xA;    staging s&#xA;WHERE NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM Date_Dim dd&#xA;    WHERE dd.label_date = s.Date&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Dealer Dimension"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{67CE1DDC-C7EB-4AEA-8E24-73D5C98F11BA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Dealer Dimension"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2D8FDDA1-F314-4E04-A291-F2FB158AD658}"
+          SQLTask:SqlStatementSource="-- Update Dealer Dimension&#xA;INSERT INTO Dealer_dim (DealerNo, Dealer_Name, Dealer_Region)&#xA;SELECT DISTINCT&#xA;    s.Dealer_No,&#xA;    s.Dealer_Name,&#xA;    s.Dealer_Region&#xA;FROM&#xA;    staging s&#xA;WHERE NOT EXISTS (&#xA;    SELECT 1&#xA;    FROM Dealer_dim dd&#xA;    WHERE dd.[DealerNo] = s.Dealer_No AND dd.[Dealer_Name] = s.[Dealer_Name] AND dd.[Dealer_Region] = s.[Dealer_Region]&#xA;);&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AA4CEC5C-E498-46BC-BFFA-45005FD33904}"
+      DTS:From="Package\Truncate Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import CSV" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DC8C0026-C580-4C9D-84BD-ACC9C01D148E}"
+      DTS:From="Package\Import CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Date dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{031ACBC3-F1AE-4437-9FD3-E0C35D762C7A}"
+      DTS:From="Package\Import CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Update Car Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{0740A0D6-2266-4848-8AC9-6015064335A1}"
+      DTS:From="Package\Import CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Update Customer Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{764D3EDF-8155-47AC-8EA2-29B8D62B9A60}"
+      DTS:From="Package\Import CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Update Dealer Dimension" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{7D6320D4-AF5D-485F-A5C4-35D947DB590F}"
+      DTS:From="Package\Update Car Dimension"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Update CarSalesFact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{361B7171-31A0-47CB-86AA-35717E2B627B}"
+      DTS:From="Package\Update Date dimension"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Update CarSalesFact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{76E978EF-FD5B-4263-A0F0-7662D41ED02E}"
+      DTS:From="Package\Update Customer Dimension"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Update CarSalesFact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{BA09B24F-CB0C-4D3A-85A3-C73F9DEC6F84}"
+      DTS:From="Package\Update Dealer Dimension"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Update CarSalesFact Table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{33BE204D-F466-4A84-95C6-FA4960B4919C}"
+      DTS:From="Package\Update CarSalesFact Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Analysis Services Processing Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Import CSV"
+          TopLeft="419,218" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Truncate Staging"
+          TopLeft="176,220" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Update Car Dimension"
+          TopLeft="695,182" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Update CarSalesFact Table"
+          TopLeft="1179,267" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Update Customer Dimension"
+          TopLeft="716,284" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Update Date dimension"
+          TopLeft="703,16" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Update Dealer Dimension"
+          TopLeft="548,400" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="335,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84,0"
+              Start="0,0"
+              End="76.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="485,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="282.333333333333,-160"
+              Start="0,0"
+              End="282.333333333333,-152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-91.1941238195173" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-91.1941238195173"
+                    Point2="0,-95.1941238195173"
+                    Point3="4,-95.1941238195173" />
+                  <mssgle:LineSegment
+                    End="278.333333333333,-95.1941238195173" />
+                  <mssgle:CubicBezierSegment
+                    Point1="278.333333333333,-95.1941238195173"
+                    Point2="282.333333333333,-95.1941238195173"
+                    Point3="282.333333333333,-99.1941238195173" />
+                  <mssgle:LineSegment
+                    End="282.333333333333,-152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="551,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144,-36"
+              Start="0,0"
+              End="136.5,-36">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="68,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68,0"
+                    Point2="72,0"
+                    Point3="72,-4" />
+                  <mssgle:LineSegment
+                    End="72,-32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72,-32"
+                    Point2="72,-36"
+                    Point3="76,-36" />
+                  <mssgle:LineSegment
+                    End="136.5,-36" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="505.666666666667,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="316.833333333333,24"
+              Start="0,0"
+              End="316.833333333333,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,5.77245508982036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,5.77245508982036"
+                    Point2="0,9.77245508982036"
+                    Point3="4,9.77245508982036" />
+                  <mssgle:LineSegment
+                    End="312.833333333333,9.77245508982036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="312.833333333333,9.77245508982036"
+                    Point2="316.833333333333,9.77245508982036"
+                    Point3="316.833333333333,13.7724550898204" />
+                  <mssgle:LineSegment
+                    End="316.833333333333,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="464.333333333333,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183.166666666667,140"
+              Start="0,0"
+              End="183.166666666667,132.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.0059880239521" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.0059880239521"
+                    Point2="0,57.0059880239521"
+                    Point3="4,57.0059880239521" />
+                  <mssgle:LineSegment
+                    End="179.166666666667,57.0059880239521" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179.166666666667,57.0059880239521"
+                    Point2="183.166666666667,57.0059880239521"
+                    Point3="183.166666666667,61.0059880239521" />
+                  <mssgle:LineSegment
+                    End="183.166666666667,132.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="787,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="461.666666666667,43"
+              Start="0,0"
+              End="461.666666666667,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.6001936108422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.6001936108422"
+                    Point2="0,25.6001936108422"
+                    Point3="4,25.6001936108422" />
+                  <mssgle:LineSegment
+                    End="457.666666666667,25.6001936108422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="457.666666666667,25.6001936108422"
+                    Point2="461.666666666667,25.6001936108422"
+                    Point3="461.666666666667,29.6001936108422" />
+                  <mssgle:LineSegment
+                    End="461.666666666667,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="827.666666666667,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="486.666666666667,209"
+              Start="0,0"
+              End="486.666666666667,201.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,100.58458755976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,100.58458755976"
+                    Point2="0,104.58458755976"
+                    Point3="4,104.58458755976" />
+                  <mssgle:LineSegment
+                    End="482.666666666667,104.58458755976" />
+                  <mssgle:CubicBezierSegment
+                    Point1="482.666666666667,104.58458755976"
+                    Point2="486.666666666667,104.58458755976"
+                    Point3="486.666666666667,108.58458755976" />
+                  <mssgle:LineSegment
+                    End="486.666666666667,201.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="929,305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="250,-17"
+              Start="0,0"
+              End="242.5,-17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="121,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121,0"
+                    Point2="125,0"
+                    Point3="125,-4" />
+                  <mssgle:LineSegment
+                    End="125,-13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="125,-13"
+                    Point2="125,-17"
+                    Point3="129,-17" />
+                  <mssgle:LineSegment
+                    End="242.5,-17" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="679.333333333333,400">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="602.166666666667,-91"
+              Start="0,0"
+              End="602.166666666667,-83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-32.8354935194417" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-32.8354935194417"
+                    Point2="0,-36.8354935194417"
+                    Point3="4,-36.8354935194417" />
+                  <mssgle:LineSegment
+                    End="598.166666666667,-36.8354935194417" />
+                  <mssgle:CubicBezierSegment
+                    Point1="598.166666666667,-36.8354935194417"
+                    Point2="602.166666666667,-36.8354935194417"
+                    Point3="602.166666666667,-40.8354935194417" />
+                  <mssgle:LineSegment
+                    End="602.166666666667,-83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Analysis Services Processing Task"
+          TopLeft="1506,264" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="1384,286.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,0"
+              Start="0,0"
+              End="114.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="114.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Import CSV\Flat File Source"
+          TopLeft="467,168" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Import CSV\SQL Server Destination"
+          TopLeft="853,170" />
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Flat File Source Output]"
+          TopLeft="618,190">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="235,0"
+              Start="0,0"
+              End="227.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="227.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import CSV\SQL Server Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[DESKTOP-6U1S4EO]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost.MultidimensionalProject]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

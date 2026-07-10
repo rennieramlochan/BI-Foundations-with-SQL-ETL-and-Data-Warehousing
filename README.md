@@ -6,7 +6,7 @@ Certificate:
 **Certificate for Rennie Ramlochan, Microsoft Power BI Data Analyst Professional Certificate, offered through Coursera.** 
 
 
-***The focus of this portfolio was to gather, improve, and complete activities related to Business Intelligence and Data Engineering as presented in the BI Foundations with SQL, ETL, and Data Warehousing curriculum. This repository serves as a professional portfolio documenting the practical application of building robust data infrastructure and high-performance BI pipelines.*** 
+***The focus of this portfolio was to gather, improve, and complete activities related to Business Intelligence and Data Engineering as presented in the BI Foundations with SQL, ETL, and Data Warehousing curriculum.*** 
 
 
 ## Overview

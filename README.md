@@ -6,13 +6,14 @@ Certificate:
 **Certificate for Rennie Ramlochan, Microsoft Power BI Data Analyst Professional Certificate, offered through Coursera.** 
 
 
-***Those who earn the BI Foundations with SQL, ETL, and Data Warehousing certificate have completed a series of courses that include hands-on, practice-based assessments designed to prepare them for roles in Business Intelligence and Data Engineering. They are competent in designing and maintaining data warehouses, developing robust ETL pipelines to transform raw data into actionable insights, and performing advanced data analysis, as well as utilizing industry-standard technologies such as SQL, Python, and dimensional modeling.*** 
+***The focus of this portfolio was to gather, improve, and complete activities related to Business Intelligence and Data Engineering as presented in the BI Foundations with SQL, ETL, and Data Warehousing curriculum. This repository serves as a professional portfolio documenting the practical application of building robust data infrastructure and high-performance BI pipelines.*** 
 
 
 ## Overview
 This repository serves as a professional portfolio documenting the completion of the **BI Foundations with SQL, ETL, and Data Warehousing** specialization offered through Coursera.
 
 This program provides a deep dive into the foundational architecture of Business Intelligence, focusing on how raw data is extracted, transformed, and loaded into structured data warehouses to enable high-level analytical reporting.
+Those who earn the BI Foundations with SQL, ETL, and Data Warehousing certificate have completed a series of courses that include hands-on, practice-based assessments designed to prepare them for roles in Business Intelligence and Data Engineering. They are competent in designing and maintaining data warehouses, developing robust ETL pipelines to transform raw data into actionable insights, and performing advanced data analysis, as well as utilizing industry-standard technologies such as SQL, Python, and dimensional modeling.
 
 ## Technical Proficiencies
 - **Data Warehousing:** Designing and implementing star and snowflake schemas for scalable data storage.
